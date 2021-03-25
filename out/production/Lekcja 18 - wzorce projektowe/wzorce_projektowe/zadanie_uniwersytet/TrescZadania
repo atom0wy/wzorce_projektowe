@@ -1,0 +1,7 @@
+zadanie uniwersytet:
+Program ma posiadać listę obiektów Person (Student, Teacher...).
+2. Każdy Person ma imię oraz nazwisko
+3. Student dodatkowo ma pole String course
+4. Teacher dodatkowo ma listę List<String> blocks
+5. Docelowo wyświetlamy listę Personów na konsoli posortowaną po imieniu lub nazwisku
+Wykorzystujemy wzorce:  builder (dla person), strategy (dla wyświetlania), fasada (PersonFacade do operacji na Personach) ew. singleton (dla uniwersytet)

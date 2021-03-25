@@ -9,6 +9,7 @@ public class Pizza {
     private boolean czyBiala;
     private boolean ostra;
     private int dodatkowaWielkosc;
+    private Size size;
 
     private Pizza(PizzaBuilder pizzaBuilder) {
         this.skladnik = pizzaBuilder.skladnik;
@@ -17,6 +18,7 @@ public class Pizza {
         this.czyBiala = pizzaBuilder.czyBiala;
         this.ostra = pizzaBuilder.ostra;
         this.dodatkowaWielkosc = pizzaBuilder.dodatkowaWielkosc;
+        this.size = pizzaBuilder.size;
     }
 
     public String getSkladnik() {
@@ -43,6 +45,15 @@ public class Pizza {
         return dodatkowaWielkosc;
     }
 
+    public Size getSize() {
+        return size;
+    }
+
+    public Pizza setSize(Size size) {
+        this.size = size;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Pizza{" +
@@ -52,6 +63,8 @@ public class Pizza {
                 ", czyBiala=" + czyBiala +
                 ", ostra=" + ostra +
                 ", dodatkowaWielkosc=" + dodatkowaWielkosc +
+                ", size=" + size +
+                ", diameter=" + size.diameter +
                 '}';
     }
 
@@ -65,6 +78,7 @@ public class Pizza {
         private boolean czyBiala;
         private boolean ostra;
         private int dodatkowaWielkosc;
+        private Size size;
 
         public PizzaBuilder(String skladnik, String ciasto, String sos) {
             this.skladnik = skladnik;
@@ -84,6 +98,11 @@ public class Pizza {
 
         public PizzaBuilder setDodatkowaWielkosc(int dodatkowaWielkosc) {
             this.dodatkowaWielkosc = dodatkowaWielkosc;
+            return this;
+        }
+
+        public PizzaBuilder setSize(wzorce_projektowe.builder.exercise.Size size) {
+            this.size = size;
             return this;
         }
 

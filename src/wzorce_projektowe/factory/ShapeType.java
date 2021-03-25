@@ -4,5 +4,6 @@ public enum ShapeType {
     LINE,
     CIRCLE,
     SPHERE,
-    SQUARE
+    SQUARE,
+    TRAPEZOID
 }

@@ -9,6 +9,8 @@ public class TwoDShapeFactory extends AbstractFactory {
             return new Line();
         } else if (ShapeType.SQUARE == shapeType) {
             return new Square();
+        } else if (ShapeType.TRAPEZOID == shapeType) {
+            return new Trapezoid();
         }
         return null;
     }

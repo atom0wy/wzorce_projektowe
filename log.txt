@@ -1,0 +1,4 @@
+09:25:39.974718400, INFO, Testowy tekst
+09:25:40.000649400, ERROR, Testowy tekst 2
+13:56:59.349129700, INFO, Testowy tekst
+13:56:59.368076100, ERROR, Testowy tekst 2
