@@ -1,4 +1,4 @@
-package wzorce_projektowe.stary_uni;
+package wzorce_projektowe.zadanie_uniwersytet_draft;
 
 public class DisplaySurnameSortStrategy implements  DisplayStrategy{
     @Override

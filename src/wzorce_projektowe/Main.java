@@ -1,5 +1,19 @@
 package wzorce_projektowe;
 
+import wzorce_projektowe.decorator.AbsCar;
+import wzorce_projektowe.decorator.Car;
+import wzorce_projektowe.decorator.LeatherCar;
+import wzorce_projektowe.decorator.Vehicle;
+import wzorce_projektowe.decorator.exercise.Internet;
+import wzorce_projektowe.decorator.exercise.Media;
+import wzorce_projektowe.decorator.exercise.Product;
+import wzorce_projektowe.decorator.exercise.Television;
+import wzorce_projektowe.zadanie_uniwersytet.Person;
+import wzorce_projektowe.zadanie_uniwersytet.PersonFacade;
+
+import java.util.LinkedList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         //EagerSingleton eagerSingleton = new EagerSingleton(); // nie da się utworzyć 2 instancji singletonu
@@ -70,9 +84,28 @@ public class Main {
         Adapter adapter = new AdapterImpl(converter);
         pdf.convert(adapter);*/
 
-        System.out.println("\nDecorator exercise:");
+        System.out.println("\nDecorator exercise CAR:");
+        /*//Vehicle vehicle = new Car();
+        //Vehicle vehicleLeather = new LeatherCar(vehicle);
+        //Vehicle vehicleLeatherWithAbs = new AbsCar(vehicleLeather);
+
+        //lepszy sposób:
+        Vehicle vehicle = new AbsCar((new LeatherCar((new Car()))));*/
+
+        System.out.println("\nDecorator exercise MEDIA:");
         /*Product product = new Internet(new Television(new Media()));
         System.out.println(product.description());*/
 
+        System.out.println("\nUniversity exercise:");
+        PersonFacade personFacade = new PersonFacade();
+        List<Person> personList = new LinkedList<>();
+
+        personList.add(personFacade.addStudent("Adam", "Zabłocki", "java"));
+        personList.add(personFacade.addTeacher("Piotr", "Nowak", List.of("wzorce", "spring")));
+
+        System.out.println("Display first name:");
+        personFacade.displayFirstNameSorted(personList);
+        System.out.println("Display last name:");
+        personFacade.displayLastNameSorted(personList);
     }
 }
