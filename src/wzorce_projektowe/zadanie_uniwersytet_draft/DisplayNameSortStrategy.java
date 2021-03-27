@@ -1,4 +1,4 @@
-package wzorce_projektowe.zadanie_uniwersytet;
+package wzorce_projektowe.stary_uni;
 
 public class DisplayNameSortStrategy implements  DisplayStrategy{
     @Override
